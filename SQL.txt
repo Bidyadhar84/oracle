@@ -1,0 +1,182 @@
+1.     What can SQL do?
+sql
+Key to Database !!
+
+Normally SQL is used to store, update and retrieve the information from the database. After having some certain data, it is stored in the database through certain SQL commands. The data can be updated, inserted, deleted from the database through SQL. At the end, we can retrieve the required information from the database through SQL.
+
+2.     Define the categories of Data Manipulation Language.
+Data manipulation language (DML) is divided into three categories.
+
+(a) Retrieve the data : Retrieving the required data from the database. The command for retrieving data is SELECT. 
+(b) Manipulate the data :  This feature allows us to perform some arithmetic functions like summing, averaging, subtracting, dividing the data between two or more columns.
+(c)  Update the Data: It means we can update the data like inserting data into table, deleting data from table, change the values in tables etc.
+COMMANDS
+
+SELECT – Retrieve data from the a database
+INSERT – Insert data into a table or Database
+UPDATE – Updates or Modifying existing data within a table or database
+DELETE – Deletes all records from a table, the space for the records remain
+MERGE – UPSERT operation (insert or update)
+CALL – Call a PL/SQL or Java subprogram
+EXPLAIN PLAN – explain access path to data
+LOCK TABLE – Control concurrency to avoid Data leaking
+3.     What are the data types in SQL?
+
+The data types in SQL are listed below.
+
+(a)  CHAR (size): A column is defined with a CHAR data type is allowed to store all types of characters which include letters both uppercase and lowercase, special characters like @,#,$,&,etc. and numerical values.
+(b) VARCHAR2 (size): This data type is used to store string type variables where the size can have maximum 2000 characters.
+(c)  NUMBER (p,s): This data type is used to store numerical data into the database. The value of p determines the total number of digits possible to the left of decimal point whereas the value of s determines the total number of digits possible to the right of decimal point.
+(d) DATE :  This type of data type is used to store the date and time information in database. Default format is DD-MM-YY.
+(e)  LONG:  This data type is used to store variable length character strings up to 2GB size.
+
+4.     What are the limitations of LONG data type in SQL ?
+
+There are certain limitations for use of  LONG data type in SQL. These are as follows:
+
+(a)  A table cannot have more than one LONG data type.
+(b) It cannot be indexed.
+(c)  It cannot be used in SQL functions
+(d) It cannot appear in WHERE, GROUP BY, ORDER BY clauses.
+
+5.     Mention some important SQL commands.
+
+Some of the important SQL commands are listed below.
+
+SELECT                      – This command is used to extracts data from a database.
+UPDATE                    – This command is used to update the data in a database.
+DELETE                     – This command is used to delete any data from database.
+INSERT INTO           – This command is used to insert a new data into  the database.
+CREATE DATABASE – This command is used to create a new database.
+ALTER DATABASE   – This command is used for any type of modification in a database.
+CREATE TABLE        – This command is used for creating a new table.
+ALTER TABLE          – This command is used for modification in the table.
+DROP TABLE           – This command is used to delete a table.
+CREATE INDEX        – This command is used to create an index.
+DROP INDEX           – This command is used to delete an index.
+6.     Consider the following table STUDENT.
+
+REGD.NO	NAME	BRANCH
+0001	Ram	CSE
+0002	Hari	MECH
+0003	Pradeep	EEE
+0004	Deepak	ETC
+ 
+
+Write a SQL command which will show the entire STUDENT table.
+
+Ans:- The SQL command which will show all the information in STUDENT table is
+
+      SELET * from STUDENT;
+
+7.     Consider the following table STUDENT.
+ 
+
+REGD.NO	NAME	BRANCH
+0001	Ram	CSE
+0002	Hari	MECH
+0003	Pradeep	EEE
+0004	Deepak	ETC
+ Write down the SQL command which will show the Regd. No of Pradeep.
+
+The SQL command which will show the Regd.No of Pradeep is
+
+SELECT regd.no from STUDENT WHERE name=Pradeep;
+
+8.     Consider the following table STUDENT.
+
+ 
+
+REGD.NO	NAME	BRANCH
+0001	Ram	CSE
+0002	Hari	MECH
+0003	Pradeep	EEE
+0004	Deepak	ETC
+Write down the SQL command which will show the Name and Branch column.
+
+The SQL command which will show the NAME and BRANCH column is
+
+        SELECT Name, Branch from STUDENT;
+
+9.     Consider the following table STUDENT.
+
+ 
+
+REGD.NO	NAME	BRANCH
+0001	Ram	CSE
+0002	Hari	MECH
+0003	Pradeep	EEE
+0004	Deepak	ETC
+Write a SQL command which will count the number of rows existing in STUDENT table.
+
+The SQL command which will count the number of rows present in STUDENT table is
+
+        SELECT COUNT(*) FROM STUDENT;
+
+10.     Consider the following table STUDENT.
+
+ 
+
+REGD.NO	NAME	BRANCH
+0001	Ram	CSE
+0002	Hari	MECH
+0003	Pradeep	EEE
+0004	Deepak	ETC
+I want to add another column in the STUDENT table as”address”. How can I do that?
+
+To add another column in STUDENT table we can use ALTER command as
+
+            Alter table student add address varchar2(30);
+
+Important Questions on SQL : 
+
+1. Query Emp table.
+2. Select the employees in department 30.
+3. List the names, numbers and departments of all clerks.
+4. Find the department numbers and names of employees of all departments with deptno greater than 20.
+5. Find employees whose commission is greater than their salaries.
+6. Find employees whose commission is greater than 60 % of their salaries.
+7. List name, job and salary of all employees in department 20 who earn more than 2000/-.
+8. Find all salesmen in department 30 whose salary is greater than 1500/-.
+9. Find all employees whose designation is either manager or president.
+10. Find all managers who are not in department 30.
+11. Find all the details of managers and clerks in dept 10.
+12. Find the details of all the managers (in any dept) and clerks in dept 20.
+13. Find the details of all the managers in dept. 10 and all clerks in dept 20 and all employees who are neither managers nor clerks but whose salary is more than or equal to 2000/-.
+14. Find the names of anyone in dept. 20 who is neither manager nor clerk.
+15. Find the names of employees who earn between 1200/- and 1400/-.
+16. Find the employees who are clerks, analysts or salesmen.
+17. Find the employees who are not clerks, analysts or salesmen.
+18. Find the employees who do not receive commission.
+19. Find the different jobs of employees receiving commission.
+20. Find the employees who do not receive commission or whose commission is less than 100/-.
+21. If all the employees not receiving commission is entitles to a bonus of Rs. 250/- show the net earnings of all the employees.
+22. Find all the employees whose total earning is greater than 2000/- .
+23. Find all the employees whose name begins or ends with ‘M’
+24. Find all the employees whose names contain the letter ‘M’ in any case.
+25. Find all the employees whose names are upto 15 character long and have letter ‘R’ as 3rd character of their names.
+26. Find all the employees who were hired in the month of February (of any year).
+27. Find all the employees who were hired on last day of the month.
+28. Find all the employees who were hired more than 2 years ago.
+29. Find the managers hired in the year 2003.
+30. Display the names and jobs of all the employees separated by a space.
+31. Display the names of all the employees right aligning them to 15 characters.
+32. Display the names of all the employees padding them to the right up to 15 characters with ‘*’.
+33. Display the names of all the employees without any leading ‘A’.
+34. Display the names of all the employees without any trailing ‘R’.
+35. Show the first 3 and last 3 characters of the names of all the employees.
+36. Display the names of all the employees replacing ‘A’ with ‘a’.
+37. Display the names of all the employees and position where the string ‘AR’ occurs in the name.
+38. Show the salary of all the employees , rounding it to the nearest Rs. 1000/-.
+39. Show the salary of all the employees , ignoring the fraction less than Rs. 1000/-.
+40. Show the names of all the employees and date on which they completed 3 years of service.
+41. For each employee, display the no. of days passed since the employee joined the company.
+42. For each employee, display the no. of months passed since the employee joined the company.
+43. Display the details of all the employees sorted on the names.
+44. Display the names of the employees, based on the tenure with the oldest employee coming first.
+45. Display the names, jobs and salaries of employees, sorting on job and salary.
+46. Display the names, jobs and salaries of employees, sorting on descending order of job and within job sorted on salary.
+47. List the employee names, department names and salary for those employees who have completed 1 year of service.
+48. List the employee names, department names and salary for those employees who are earning 0 commission or commission is null. Sort your output in the order of department name.
+49. List the employee names, department names and hiredate for those employees who have joined in 2003 . Sort your output in the order of joining date.
+50. List all the department names along with the names of employees in them , irrespective of the fact whether any employee is there or not.
